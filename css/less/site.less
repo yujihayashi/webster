@@ -28,7 +28,7 @@ NON-RESPONSIVE START
 **********************************************************************************************/
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
 .container {max-width: none !important;width: 960px;}
-.navbar-nav > li > a {padding-top: 15px;padding-bottom:15px;}
+.navbar-nav > li > a {padding-top: 24px;padding-bottom:24px;}
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
 /* Finesse the page header spacing */.page-header {margin-bottom: 30px;}.page-header .lead {margin-bottom: 10px;}/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*//* Reset the container *//* Always float the navbar header */.navbar-header {float: left;}/* Undo the collapsing navbar */.navbar-collapse {display: block !important;height: auto !important;padding-bottom: 0;overflow: visible !important;}.navbar-toggle {display: none;}.navbar-collapse {border-top: 0;}.navbar-brand {margin-left: -15px;}/* Always apply the floated nav */.navbar-nav {float: left;margin: 0;}.navbar-nav > li {float: left;}/* Redeclare since we override the float above */.navbar-nav.navbar-right {float: right;}/* Undo custom dropdowns */.navbar .navbar-nav .open .dropdown-menu {position: absolute;float: left;background-color: #fff;border: 1px solid #cccccc;border: 1px solid rgba(0, 0, 0, 0.15);border-width: 0 1px 1px;border-radius: 0 0 4px 4px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);}.navbar-default .navbar-nav .open .dropdown-menu > li > a {color: #333;}.navbar .navbar-nav .open .dropdown-menu > li > a:hover,.navbar .navbar-nav .open .dropdown-menu > li > a:focus,.navbar .navbar-nav .open .dropdown-menu > .active > a,.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {color: #fff !important;background-color: @primary-color !important;}.navbar .navbar-nav .open .dropdown-menu > .disabled > a,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {color: #999 !important;background-color: transparent !important;}
 /**********************************************************************************************
@@ -42,14 +42,62 @@ a, button  {transition: all 0.25s ease 0s;}
 /*
 FONTS START
 **********************************************************************************************/
-.box-chamada {font-family: 'robotoblack', Arial, sans-serif;font-weight: normal;}
+.lista-multimidia .title, .box-chamada .plus, .footer-header, .btn, .navbar-nav, .extra-header .line-1 strong {font-family: 'MyriadproBold', Arial, sans-serif;font-weight: normal;}
+.extra-footer .line-1 {font-family: 'MyriadproRegular', Arial, sans-serif;font-weight: normal;}
+.extra-footer small {font-family: Arial, sans-serif;font-weight: normal;}
 /**********************************************************************************************
 FONTS END
 */
 /*
 ESTRUTURA START
 **********************************************************************************************/
+.extra-header {
+	background: url(../imagem/site/bg-header.png) no-repeat center top;position: relative;z-index: 2;margin-bottom: -55px;
+	.site-header {height: 190px;}
+	.line-1 {height: 65px;color: @secondary-color;line-height: 1;}
+	.line-2 {height: 70px;}
+	.telefone {
+		font-size: 12px;padding-top:15px;
+		.media-body {padding-top:4px;}
+		strong {font-size: 18px;}
+	}
+	.area {
+		font-size: 14px;text-align: right;padding-top:15px;
+		.media-body {
+			.content {display: inline-block;}
+		}
+	}
+	.navbar {
+		background: none;border:0;margin:0;
+		.navbar-nav {
+			text-transform: uppercase;font-size: 14px;
+			> li {
+				+ li {background: url(../imagem/site/bg-menu-item.png) no-repeat left center;padding-left: 3px;}
+				a {
+					color: #FFF;
+					&:hover {color: #fcf237;}
+				}
+				&.active {
+					a {background: none;color: #FFF;}
+				}
+			}
+		}
+	}
+	.navbar-header {
+		text-align: center;float: none;position: absolute;left: 0;right: 0;top: 0;
+		.navbar-brand {padding:20px 0 0;display: inline-block;float: none;height: 65px;}
+	} 
+}
 
+.extra-footer {
+	.site-footer {
+		.line-1 {font-size: 14px;color: #888888;text-align: center;padding:50px 0 44px;background: url(../imagem/site/bg-footer.jpg) no-repeat center top;line-height: 1.1;}
+		.line-2 {background: #3e4095;color: #7476b3;padding:24px 0;text-align: center;}
+		small {font-size: 10px;}
+		.footer-header {display: block;font-size: 18px;color: @secondary-color;text-transform: uppercase;margin-bottom: 15px;}
+	}
+	.telefone {font-size: 16px;}
+}
 /**********************************************************************************************
 ESTRUTURA END
 */
@@ -59,11 +107,97 @@ CLASSES START
 [class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
 .btn-gray {background: #EEE;color:#C93F2A;}
 .btn-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
+.btn-sm {font-size: 12px;}
+.btn {font-size: 14px;padding:10px 40px;}
+.extra-banner {
+	background: #bad5fc no-repeat center top;
+	.box-banner {
+		background: url(../imagem/site/bg-banner-mask.png) no-repeat center 264px;padding-top:402px;
+	}
+}
+.box-noticias {
+	padding:0 48px;position: relative;font-size: 14px;line-height: 1.2;margin-bottom: 30px;
+	.cycle-slideshow, .cycle-slideshow li {width: 100%;overflow: hidden;}
+	.media {
+		> .pull-left {padding-right: 40px;}
+		.media-body {padding-top:15px;}
+	}
+	.media-heading {
+		font-size: 30px;line-height: 1;
+		&, a {color: @secondary-color;}
+	}
+	.noticia-content {height: 176px;}
+	.imagem {
+		display: inline-block;padding-bottom: 14px;background: url(../imagem/site/bg-sombra.png) no-repeat center bottom;
+		.content {.border-radius(4px);overflow: hidden;display: block;}
+	}
+	.cycle-prev, .cycle-next {position: absolute;top: 50%;margin-top:-13px;}
+	.cycle-prev {left: 0;}
+	.cycle-next {right: 0;}
+	.cycle-nav {
+		position: absolute;left: 470px;bottom: 28px;
+		span {
+			cursor: pointer;display: inline-block;text-indent: -1000px;overflow: hidden;width: 9px;height: 9px;background: #b6b6b6;.border-radius(50px);
+			&.cycle-pager-active {background: @primary-color;}
+			+ span {margin-left: 10px;}
+		}
+	}
+}
+.box-chamada {
+	background: url(../imagem/site/bg-livros.png) no-repeat center top;position: relative;margin-top: -26px;height: 193px;z-index: 2;
+	.content {
+		font-size: 14px;padding-top:68px;line-height: 1.2;
+		&, a {color: #FFF;}
+		.media-heading {font-size: 30px;margin:0;}
+	}
+	.plus {
+		padding-top:80px;text-align: center;font-size: 14px;
+		a {display: block;padding:12px 0;}
+	}
+}
+.box-contato {
+	background: url(../imagem/site/bg-contato.jpg) no-repeat center top;position: relative;z-index: 1;margin-top:-23px;height: 384px;
+	.form-group {margin-bottom: 6px;}
+	.left {
+		.content {padding:56px 0 0;}
+	}
+	.right {
+		font-size: 14px;line-height: 1.2;
+		.content {padding:270px 0 0;}
+	}
+}
+.box-lista {
+	padding:60px 0;
+	.box {
+		.box-header {
+			margin-bottom: 10px;
+			.media-heading {
+				font-size: 18px;color: @secondary-color;text-transform: uppercase;background: url(../imagem/site/bg-strip.png) repeat-x center;
+				span {display: inline-block;background: #FFF;padding-right: 15px;}
+			}
+		}
+	}
+	.box-fotos {
+		padding-right: 12px;
+	}
+	.box-videos {
+		padding-left: 12px;
+	}
+}
+
+.form-control {border-color: #dacfa9;box-shadow:none;background: rgba(255, 255, 255, .8);}
 
 .imagem {display: inline-block;overflow: hidden;max-width: 100%;}
 .imagem-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
 .inline-block {display:inline-block;}
-[class^='icon-'], [class*='icon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(../imagem/site/icon.png);}
+[class^='ycon-'], [class*='ycon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(../imagem/site/ycon.png);}
+
+.lista-multimidia {
+	margin:0 -1.5%;
+	> li {float: left;width: 30%;margin:0 1.5%;}
+	.imagem {display: block;margin-bottom: 10px;overflow: hidden;height: 140px;}
+	.title {font-size: 14px;line-height: 1;display: block;}
+}
 
 .space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
 .relative {position: relative;}

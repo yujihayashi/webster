@@ -1,0 +1,5 @@
+.ycon{ background:url("ycon.png") top left no-repeat; }
+.ycon-phone{ width:40px; height:39px; background-position:-1px -1px; }
+.ycon-arrow-left{ width:16px; height:27px; background-position:-1px -41px; }
+.ycon-arrow-right{ width:16px; height:27px; background-position:-18px -41px; }
+
